@@ -1,0 +1,32 @@
+[package]
+name    = "attaseek-web"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish     = false
+authors.workspace    = true
+repository.workspace = true
+
+[dependencies]
+tokio      = { workspace = true }
+axum       = { workspace = true }
+tower      = { workspace = true }
+tower-http = { workspace = true }
+serde      = { workspace = true }
+serde_json = { workspace = true }
+thiserror  = { workspace = true }
+anyhow     = { workspace = true }
+tracing            = { workspace = true }
+tracing-subscriber = { workspace = true }
+figment   = { workspace = true }
+time      = { workspace = true }
+uuid      = { workspace = true }
+
+# template engine for contact emails (optional, lightweight)
+tera = "1"
+# email sending (optional — stub for now, can wire to sendgrid/smtp later)
+lettre = { version = "0.11", optional = true, default-features = false, features = ["builder", "rustls-tls"] }
+
+[features]
+default = []
+email   = ["lettre"]

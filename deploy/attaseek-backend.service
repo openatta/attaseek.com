@@ -1,0 +1,22 @@
+[Unit]
+Description=AttaSeek Web Backend
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/opt/attaseek
+EnvironmentFile=-/opt/attaseek/backend.env
+ExecStart=/opt/attaseek/backend
+Restart=always
+RestartSec=5
+
+# Security hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/attaseek
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

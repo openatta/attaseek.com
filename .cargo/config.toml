@@ -1,0 +1,3 @@
+# Cross-compilation is done via cargo-zigbuild, not plain cargo.
+# Use ./scripts/build.sh which invokes:
+#   cargo zigbuild --release --target x86_64-unknown-linux-musl -p attaseek-web

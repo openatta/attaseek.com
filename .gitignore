@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+frontend/dist/
+target/
+
+# IDE
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+backend.env
+
+# Logs
+*.log
